@@ -10,6 +10,17 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+EmployeeName is : @TempData["EmpName"];
+<br />
+Skill Set :-
+<ul>
+    @foreach (var item in (List<string>)TempData["SkillSet"])
+    {
+        <li>
+            @item
+        </li>
+    }
+</ul>
 <table class="table">
     <tr>
         <th>
@@ -39,6 +50,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.EmpSal)
             </td>
+
             <td>
                 @Html.DisplayFor(modelItem => item.EmpAdd)
             </td>
@@ -49,5 +61,4 @@
             </td>
         </tr>
     }
-
 </table>

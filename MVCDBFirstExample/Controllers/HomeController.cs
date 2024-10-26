@@ -15,9 +15,11 @@ namespace MVCDBFirstExample.Controllers
 
         public ActionResult About()
         {
+            var skill1 = (List<string>)TempData["SkillSet"];
+           
             ViewBag.Message = "Your application description page.";
 
-            return View();
+            return View(skill1);
         }
 
         public ActionResult Contact()

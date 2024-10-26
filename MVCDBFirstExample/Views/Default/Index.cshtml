@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+EmployeeName is : @ViewData["EmpName"];
+<br />
+Skill Set :-
+<ul>
+    @foreach (var item in (List<string>)ViewData["SkillSet"])
+    {
+        <li>
+            @item
+        </li>
+    }
+</ul>
+
+
+EmployeeName is :  @ViewBag.EmpName;
+<br />
+Skill Set :-
+<ul>
+    @foreach (var item in ViewBag.SkillSet)
+    {
+        <li>
+            @item
+        </li>
+    }
+</ul>
+
+EmployeeName is : @TempData["EmpName"];
+<br />
+Skill Set :-
+<ul>
+    @foreach (var item in (List<string>)TempData["SkillSet"])
+    {
+        <li>
+            @item
+        </li>
+    }
+</ul>

@@ -26,5 +26,6 @@ namespace MVCDBFirstExample.Models
         }
     
         public virtual DbSet<Employee> Employees { get; set; }
+        public virtual DbSet<Dept> Depts { get; set; }
     }
 }
